@@ -1,5 +1,5 @@
 from django.db import models
-# from django.utils.timezone import now  # unused import kept but commented
+#from django.utils.timezone import now  # Unused
 from django.core.validators import MaxValueValidator, MinValueValidator
 
 
@@ -26,7 +26,7 @@ class CarModel(models.Model):
         validators=[
             MaxValueValidator(2023),
             MinValueValidator(2015),
-        ]
+        ],
     )
 
     def __str__(self):
@@ -35,4 +35,5 @@ class CarModel(models.Model):
             f"Type: {self.type}\n"
             f"Year: {self.year}"
         )
-        
+
+# End of file newline
